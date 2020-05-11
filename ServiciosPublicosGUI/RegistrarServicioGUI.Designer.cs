@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrarServicioGUI));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.EntidadTxt = new System.Windows.Forms.TextBox();
             this.NumeroReciboTxt = new System.Windows.Forms.TextBox();
             this.ValorPagadotxt = new System.Windows.Forms.TextBox();
             this.FechaDtp = new System.Windows.Forms.DateTimePicker();
             this.RegistrarBtn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -79,13 +82,6 @@
             this.label4.TabIndex = 3;
             this.label4.Text = "Fecha";
             // 
-            // EntidadTxt
-            // 
-            this.EntidadTxt.Location = new System.Drawing.Point(176, 91);
-            this.EntidadTxt.Name = "EntidadTxt";
-            this.EntidadTxt.Size = new System.Drawing.Size(100, 20);
-            this.EntidadTxt.TabIndex = 4;
-            // 
             // NumeroReciboTxt
             // 
             this.NumeroReciboTxt.Location = new System.Drawing.Point(176, 123);
@@ -102,9 +98,10 @@
             // 
             // FechaDtp
             // 
+            this.FechaDtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.FechaDtp.Location = new System.Drawing.Point(176, 155);
             this.FechaDtp.Name = "FechaDtp";
-            this.FechaDtp.Size = new System.Drawing.Size(200, 20);
+            this.FechaDtp.Size = new System.Drawing.Size(100, 20);
             this.FechaDtp.TabIndex = 8;
             // 
             // RegistrarBtn
@@ -115,17 +112,40 @@
             this.RegistrarBtn.TabIndex = 9;
             this.RegistrarBtn.Text = "Registrar";
             this.RegistrarBtn.UseVisualStyleBackColor = true;
+            this.RegistrarBtn.Click += new System.EventHandler(this.RegistrarBtn_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(451, 91);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 139);
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Emdupar",
+            "GasCaribe",
+            "Electricaribe"});
+            this.comboBox1.Location = new System.Drawing.Point(176, 91);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(100, 21);
+            this.comboBox1.TabIndex = 11;
             // 
             // RegistrarServicioGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(715, 345);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.RegistrarBtn);
             this.Controls.Add(this.FechaDtp);
             this.Controls.Add(this.ValorPagadotxt);
             this.Controls.Add(this.NumeroReciboTxt);
-            this.Controls.Add(this.EntidadTxt);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -134,6 +154,7 @@
             this.Name = "RegistrarServicioGUI";
             this.Text = "RegistrarServicioGUI";
             this.Load += new System.EventHandler(this.RegistrarServicioGUI_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -145,10 +166,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox EntidadTxt;
         private System.Windows.Forms.TextBox NumeroReciboTxt;
         private System.Windows.Forms.TextBox ValorPagadotxt;
         private System.Windows.Forms.DateTimePicker FechaDtp;
         private System.Windows.Forms.Button RegistrarBtn;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

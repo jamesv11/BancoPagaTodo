@@ -36,5 +36,66 @@ namespace BLL
                 return $"Error en los datos {e.Message}";
             }
         }
+        public RespuestaConsulta Consultar()
+        {
+            RespuestaConsulta respuesta = new RespuestaConsulta();
+            try
+            {                
+                respuesta.ServiciosPublico = servicioPublicoRepository.Consultar();
+                if (respuesta.ServiciosPublico != null)
+                {
+                    respuesta.Mensaje = "Se Consulta la Informacion de personas";
+                }
+                else
+                {
+                    respuesta.Mensaje = "No existen Datos para Consultar";
+                }
+                
+            }
+            catch (Exception e)
+            {
+                respuesta.ServiciosPublico = null;
+                respuesta.Mensaje = $"Error en la consulta {e.Message}";
+            }
+            return respuesta;
+
+        }
+        public int ObtenerCantidadServicioElectricaribe()
+        {
+            return servicioPublicoRepository.ObtenerCantidadServicioElectricaribe();
+        }
+        public int ObtenerCantidadServicioGasCaribe()
+        {
+            return servicioPublicoRepository.ObtenerCantidadServicioGasCaribe();
+        }
+        public int ObtenerCantidadServicioEmdupar()
+        {
+            return servicioPublicoRepository.ObtenerCantidadServicioEmdupar();
+        }
+        public IList<ServicioPublico> ObtenerServiciosFiltroEntidadFecha(string entidad, string fecha)
+        {
+            return ObtenerServiciosFiltroEntidadFecha(entidad, fecha);
+        }
+        public decimal ValorTotalServiciosPublicos(IList<ServicioPublico> servicioPublicos)
+        {
+            return servicioPublicoRepository.ValorTotalServiciosPublicos(servicioPublicos);
+        }
+        public ServicioPublico CrearServicioPublico(string entidad,string numeroRecibo,DateTime fecha,decimal valor)
+        {
+            ServicioPublico servicioPublico = new ServicioPublico()
+            {
+                Entidad = entidad,
+                NumeroRecibo = numeroRecibo,
+                FechaPago = fecha,
+                ValorPagado = valor
+
+            };
+            return servicioPublico;
+        }
+    }
+    public class RespuestaConsulta
+    {
+        public IList<ServicioPublico> ServiciosPublico { get; set; }
+        public string Mensaje { get; set; }
     }
 }

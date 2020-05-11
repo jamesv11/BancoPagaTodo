@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entity;
+using BLL;
+
 
 namespace ServiciosPublicosGUI
 {
@@ -20,6 +23,13 @@ namespace ServiciosPublicosGUI
         private void RegistrarServicioGUI_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void RegistrarBtn_Click(object sender, EventArgs e)
+        {
+            ServicioPublicoService servicioPublicoService = new ServicioPublicoService();
+            
+            
         }
     }
 }

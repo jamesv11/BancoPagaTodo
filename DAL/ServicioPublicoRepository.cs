@@ -76,9 +76,9 @@ namespace DAL
         {
             return servicioPublicos.Where(l => l.Entidad == "Emdupar").Count();
         }
-        public IList<ServicioPublico> ObtenerServiciosFiltroEntidadFecha(string Entidad,string Fecha)
+        public IList<ServicioPublico> ObtenerServiciosFiltroEntidadFecha(string entidad,string fecha)
         {
-            return servicioPublicos.Where(l => l.Entidad == Entidad && l.FechaPago.ToString() == Fecha).ToList();
+            return servicioPublicos.Where(l => l.Entidad == entidad && l.FechaPago.ToString() == fecha).ToList();
         }
         //public IList<ServicioPublico> ObtenerServiciosPublicosGasCaribe()
         //{
