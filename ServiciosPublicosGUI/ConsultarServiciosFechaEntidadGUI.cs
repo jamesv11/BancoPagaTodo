@@ -25,13 +25,15 @@ namespace ServiciosPublicosGUI
             try
             {
                 TablaDgv.DataSource = null;
-               
 
+                RespuestaConsulta respuestaConsulta = new RespuestaConsulta();
                 ServicioPublicoService servicioPublicoService = new ServicioPublicoService();
                 servicioPublicoService.Consultar();
                 string entidad = EntidadCmb.Text;
                 DateTime fecha = FechaDtp.Value.Date;
-                TablaDgv.DataSource = servicioPublicoService.ObtenerServiciosFiltroEntidadFecha(entidad, fecha);
+                respuestaConsulta = servicioPublicoService.ObtenerServiciosFiltroEntidadFecha(entidad, fecha);
+                TablaDgv.DataSource = respuestaConsulta.ServiciosPublico;
+                MessageBox.Show(respuestaConsulta.Mensaje);
             }
             catch (Exception)
             {
