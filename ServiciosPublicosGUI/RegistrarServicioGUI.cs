@@ -28,7 +28,10 @@ namespace ServiciosPublicosGUI
         private void RegistrarBtn_Click(object sender, EventArgs e)
         {
             ServicioPublicoService servicioPublicoService = new ServicioPublicoService();
-            
+            string mensaje = servicioPublicoService.Guardar(servicioPublicoService.CrearServicioPublico(EntidadCmb.Text,
+                NumeroReciboTxt.Text, FechaDtp.Value.Date, Convert.ToDecimal(ValorPagadoTxt.Text)));
+
+            MessageBox.Show(mensaje);
             
         }
     }

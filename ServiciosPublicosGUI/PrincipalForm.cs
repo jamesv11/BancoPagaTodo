@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Entity;
+using BLL;
 
 namespace ServiciosPublicosGUI
 {
@@ -19,7 +21,16 @@ namespace ServiciosPublicosGUI
 
         private void registrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            RegistrarServicioGUI registrarServicioGUI = new RegistrarServicioGUI();
+            registrarServicioGUI.Show();
 
+
+        }
+
+        private void filtroFechaentidadToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConsultarServiciosFechaEntidadGUI consultarServiciosFechaEntidadGUI = new ConsultarServiciosFechaEntidadGUI();
+            consultarServiciosFechaEntidadGUI.Show();
         }
     }
 }

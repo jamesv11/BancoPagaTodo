@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.filtroFechaentidadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,9 +55,18 @@
             // 
             // consultarToolStripMenuItem
             // 
+            this.consultarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.filtroFechaentidadToolStripMenuItem});
             this.consultarToolStripMenuItem.Name = "consultarToolStripMenuItem";
             this.consultarToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.consultarToolStripMenuItem.Text = "Consultar";
+            // 
+            // filtroFechaentidadToolStripMenuItem
+            // 
+            this.filtroFechaentidadToolStripMenuItem.Name = "filtroFechaentidadToolStripMenuItem";
+            this.filtroFechaentidadToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.filtroFechaentidadToolStripMenuItem.Text = "Filtro fecha/entidad";
+            this.filtroFechaentidadToolStripMenuItem.Click += new System.EventHandler(this.filtroFechaentidadToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -80,6 +90,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem registrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem filtroFechaentidadToolStripMenuItem;
     }
 }
 

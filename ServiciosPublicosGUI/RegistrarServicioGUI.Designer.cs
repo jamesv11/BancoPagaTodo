@@ -34,11 +34,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.NumeroReciboTxt = new System.Windows.Forms.TextBox();
-            this.ValorPagadotxt = new System.Windows.Forms.TextBox();
+            this.ValorPagadoTxt = new System.Windows.Forms.TextBox();
             this.FechaDtp = new System.Windows.Forms.DateTimePicker();
             this.RegistrarBtn = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.EntidadCmb = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,12 +89,12 @@
             this.NumeroReciboTxt.Size = new System.Drawing.Size(100, 20);
             this.NumeroReciboTxt.TabIndex = 6;
             // 
-            // ValorPagadotxt
+            // ValorPagadoTxt
             // 
-            this.ValorPagadotxt.Location = new System.Drawing.Point(176, 187);
-            this.ValorPagadotxt.Name = "ValorPagadotxt";
-            this.ValorPagadotxt.Size = new System.Drawing.Size(100, 20);
-            this.ValorPagadotxt.TabIndex = 7;
+            this.ValorPagadoTxt.Location = new System.Drawing.Point(176, 187);
+            this.ValorPagadoTxt.Name = "ValorPagadoTxt";
+            this.ValorPagadoTxt.Size = new System.Drawing.Size(100, 20);
+            this.ValorPagadoTxt.TabIndex = 7;
             // 
             // FechaDtp
             // 
@@ -123,28 +123,28 @@
             this.pictureBox1.TabIndex = 10;
             this.pictureBox1.TabStop = false;
             // 
-            // comboBox1
+            // EntidadCmb
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.EntidadCmb.FormattingEnabled = true;
+            this.EntidadCmb.Items.AddRange(new object[] {
             "Emdupar",
             "GasCaribe",
             "Electricaribe"});
-            this.comboBox1.Location = new System.Drawing.Point(176, 91);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 21);
-            this.comboBox1.TabIndex = 11;
+            this.EntidadCmb.Location = new System.Drawing.Point(176, 91);
+            this.EntidadCmb.Name = "EntidadCmb";
+            this.EntidadCmb.Size = new System.Drawing.Size(100, 21);
+            this.EntidadCmb.TabIndex = 11;
             // 
             // RegistrarServicioGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(715, 345);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.EntidadCmb);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.RegistrarBtn);
             this.Controls.Add(this.FechaDtp);
-            this.Controls.Add(this.ValorPagadotxt);
+            this.Controls.Add(this.ValorPagadoTxt);
             this.Controls.Add(this.NumeroReciboTxt);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -167,10 +167,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox NumeroReciboTxt;
-        private System.Windows.Forms.TextBox ValorPagadotxt;
+        private System.Windows.Forms.TextBox ValorPagadoTxt;
         private System.Windows.Forms.DateTimePicker FechaDtp;
         private System.Windows.Forms.Button RegistrarBtn;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox EntidadCmb;
     }
 }

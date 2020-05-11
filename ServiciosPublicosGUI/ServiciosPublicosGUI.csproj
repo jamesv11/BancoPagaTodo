@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsultarServiciosFechaEntidadGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultarServiciosFechaEntidadGUI.Designer.cs">
+      <DependentUpon>ConsultarServiciosFechaEntidadGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="PrincipalForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +67,9 @@
     <Compile Include="RegistrarServicioGUI.Designer.cs">
       <DependentUpon>RegistrarServicioGUI.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ConsultarServiciosFechaEntidadGUI.resx">
+      <DependentUpon>ConsultarServiciosFechaEntidadGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PrincipalForm.resx">
       <DependentUpon>PrincipalForm.cs</DependentUpon>
     </EmbeddedResource>
