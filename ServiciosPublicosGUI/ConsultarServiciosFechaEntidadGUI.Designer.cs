@@ -34,8 +34,8 @@
             this.ExportarBtn = new System.Windows.Forms.Button();
             this.Cuantos = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.CuantosTxt = new System.Windows.Forms.TextBox();
+            this.ValorTotalTxt = new System.Windows.Forms.TextBox();
             this.EntidadCmb = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.FechaDtp = new System.Windows.Forms.DateTimePicker();
@@ -77,6 +77,7 @@
             this.ExportarBtn.TabIndex = 4;
             this.ExportarBtn.Text = "Exportar";
             this.ExportarBtn.UseVisualStyleBackColor = true;
+            this.ExportarBtn.Click += new System.EventHandler(this.ExportarBtn_Click);
             // 
             // Cuantos
             // 
@@ -96,19 +97,21 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "ValorTotal";
             // 
-            // textBox2
+            // CuantosTxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(294, 243);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 7;
+            this.CuantosTxt.Enabled = false;
+            this.CuantosTxt.Location = new System.Drawing.Point(294, 243);
+            this.CuantosTxt.Name = "CuantosTxt";
+            this.CuantosTxt.Size = new System.Drawing.Size(100, 20);
+            this.CuantosTxt.TabIndex = 7;
             // 
-            // textBox3
+            // ValorTotalTxt
             // 
-            this.textBox3.Location = new System.Drawing.Point(294, 270);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 8;
+            this.ValorTotalTxt.Enabled = false;
+            this.ValorTotalTxt.Location = new System.Drawing.Point(294, 270);
+            this.ValorTotalTxt.Name = "ValorTotalTxt";
+            this.ValorTotalTxt.Size = new System.Drawing.Size(100, 20);
+            this.ValorTotalTxt.TabIndex = 8;
             // 
             // EntidadCmb
             // 
@@ -147,8 +150,8 @@
             this.Controls.Add(this.FechaDtp);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.EntidadCmb);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.ValorTotalTxt);
+            this.Controls.Add(this.CuantosTxt);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Cuantos);
             this.Controls.Add(this.ExportarBtn);
@@ -172,8 +175,8 @@
         private System.Windows.Forms.Button ExportarBtn;
         private System.Windows.Forms.Label Cuantos;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox CuantosTxt;
+        private System.Windows.Forms.TextBox ValorTotalTxt;
         private System.Windows.Forms.ComboBox EntidadCmb;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker FechaDtp;

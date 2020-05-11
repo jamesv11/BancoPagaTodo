@@ -29,10 +29,15 @@ namespace ServiciosPublicosGUI
                 RespuestaConsulta respuestaConsulta = new RespuestaConsulta();
                 ServicioPublicoService servicioPublicoService = new ServicioPublicoService();
                 servicioPublicoService.Consultar();
+
                 string entidad = EntidadCmb.Text;
                 DateTime fecha = FechaDtp.Value.Date;
                 respuestaConsulta = servicioPublicoService.ObtenerServiciosFiltroEntidadFecha(entidad, fecha);
+
                 TablaDgv.DataSource = respuestaConsulta.ServiciosPublico;
+                CuantosTxt.Text = servicioPublicoService.ObtenerCantidadServicioPublicos(respuestaConsulta.ServiciosPublico).ToString();
+                ValorTotalTxt.Text = servicioPublicoService.ValorTotalServiciosPublicos(respuestaConsulta.ServiciosPublico).ToString();
+
                 MessageBox.Show(respuestaConsulta.Mensaje);
             }
             catch (Exception)
@@ -44,6 +49,11 @@ namespace ServiciosPublicosGUI
             
 
             
+
+        }
+
+        private void ExportarBtn_Click(object sender, EventArgs e)
+        {
 
         }
     }

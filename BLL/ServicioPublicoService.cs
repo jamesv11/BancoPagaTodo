@@ -60,18 +60,11 @@ namespace BLL
             return respuesta;
 
         }
-        public int ObtenerCantidadServicioElectricaribe()
+        public int ObtenerCantidadServicioPublicos(IList<ServicioPublico> servicioPublicos)
         {
-            return servicioPublicoRepository.ObtenerCantidadServicioElectricaribe();
+            return servicioPublicoRepository.ObtenerCantidadServicioPublicos(servicioPublicos);
         }
-        public int ObtenerCantidadServicioGasCaribe()
-        {
-            return servicioPublicoRepository.ObtenerCantidadServicioGasCaribe();
-        }
-        public int ObtenerCantidadServicioEmdupar()
-        {
-            return servicioPublicoRepository.ObtenerCantidadServicioEmdupar();
-        }
+      
         public RespuestaConsulta ObtenerServiciosFiltroEntidadFecha(string entidad, DateTime fecha)
         {
             RespuestaConsulta respuestaConsulta = new RespuestaConsulta();
