@@ -39,6 +39,7 @@
             this.EntidadCmb = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.FechaDtp = new System.Windows.Forms.DateTimePicker();
+            this.fechaActualDtp = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.TablaDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,11 +143,21 @@
             this.FechaDtp.Size = new System.Drawing.Size(93, 20);
             this.FechaDtp.TabIndex = 11;
             // 
+            // fechaActualDtp
+            // 
+            this.fechaActualDtp.Enabled = false;
+            this.fechaActualDtp.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.fechaActualDtp.Location = new System.Drawing.Point(12, 12);
+            this.fechaActualDtp.Name = "fechaActualDtp";
+            this.fechaActualDtp.Size = new System.Drawing.Size(86, 20);
+            this.fechaActualDtp.TabIndex = 12;
+            // 
             // ConsultarServiciosFechaEntidadGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(715, 345);
+            this.Controls.Add(this.fechaActualDtp);
             this.Controls.Add(this.FechaDtp);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.EntidadCmb);
@@ -180,5 +191,6 @@
         private System.Windows.Forms.ComboBox EntidadCmb;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker FechaDtp;
+        private System.Windows.Forms.DateTimePicker fechaActualDtp;
     }
 }

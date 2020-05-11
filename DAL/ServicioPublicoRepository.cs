@@ -78,7 +78,17 @@ namespace DAL
         {
             return servicioPublicos.Sum(l => l.ValorPagado);
         }
+        public void Exportar(ServicioPublico servicioPublico,string ruta)
+        {
 
+            FileStream fileStream = new FileStream(ruta, FileMode.Append);
+            StreamWriter escritor = new StreamWriter(fileStream);
+            escritor.WriteLine(servicioPublico.ToString());
+
+            escritor.Close();
+            fileStream.Close();
+
+        }
     }
     }
 

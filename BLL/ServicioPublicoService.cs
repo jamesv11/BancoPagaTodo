@@ -16,7 +16,10 @@ namespace BLL
         {
             servicioPublicoRepository = new ServicioPublicoRepository();
         }
-
+        public void Exportar(ServicioPublico servicio , string ruta)
+        {
+            servicioPublicoRepository.Exportar(servicio, ruta);
+        }
         public string Guardar(ServicioPublico servicioPublico)
         {
 
