@@ -36,6 +36,7 @@
             this.NumeroReciboTxt = new System.Windows.Forms.TextBox();
             this.ValorPagadotxt = new System.Windows.Forms.TextBox();
             this.FechaDtp = new System.Windows.Forms.DateTimePicker();
+            this.RegistrarBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -106,11 +107,21 @@
             this.FechaDtp.Size = new System.Drawing.Size(200, 20);
             this.FechaDtp.TabIndex = 8;
             // 
+            // RegistrarBtn
+            // 
+            this.RegistrarBtn.Location = new System.Drawing.Point(192, 267);
+            this.RegistrarBtn.Name = "RegistrarBtn";
+            this.RegistrarBtn.Size = new System.Drawing.Size(75, 23);
+            this.RegistrarBtn.TabIndex = 9;
+            this.RegistrarBtn.Text = "Registrar";
+            this.RegistrarBtn.UseVisualStyleBackColor = true;
+            // 
             // RegistrarServicioGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(715, 345);
+            this.Controls.Add(this.RegistrarBtn);
             this.Controls.Add(this.FechaDtp);
             this.Controls.Add(this.ValorPagadotxt);
             this.Controls.Add(this.NumeroReciboTxt);
@@ -138,5 +149,6 @@
         private System.Windows.Forms.TextBox NumeroReciboTxt;
         private System.Windows.Forms.TextBox ValorPagadotxt;
         private System.Windows.Forms.DateTimePicker FechaDtp;
+        private System.Windows.Forms.Button RegistrarBtn;
     }
 }
