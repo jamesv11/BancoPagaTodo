@@ -72,9 +72,23 @@ namespace BLL
         {
             return servicioPublicoRepository.ObtenerCantidadServicioEmdupar();
         }
-        public IList<ServicioPublico> ObtenerServiciosFiltroEntidadFecha(string entidad, string fecha)
+        public RespuestaConsulta ObtenerServiciosFiltroEntidadFecha(string entidad, DateTime fecha)
         {
-            return ObtenerServiciosFiltroEntidadFecha(entidad, fecha);
+            RespuestaConsulta respuestaConsulta = new RespuestaConsulta();
+            try
+            {
+               
+                respuestaConsulta.ServiciosPublico = servicioPublicoRepository.ObtenerServiciosFiltroEntidadFecha(entidad, fecha);
+                respuestaConsulta.Mensaje = "La consulta ha sido realizada con exito";
+            }
+            catch (Exception e)
+            {
+
+                respuestaConsulta.ServiciosPublico = null;
+                respuestaConsulta.Mensaje = $"Error en los datos {e.Message}";
+            }
+            return respuestaConsulta;
+           
         }
         public decimal ValorTotalServiciosPublicos(IList<ServicioPublico> servicioPublicos)
         {
