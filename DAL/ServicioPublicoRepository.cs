@@ -76,22 +76,23 @@ namespace DAL
         {
             return servicioPublicos.Where(l => l.Entidad == "Emdupar").Count();
         }
-        public IList<ServicioPublico> ObtenerServiciosPublicosElectricaribe()
+        public IList<ServicioPublico> ObtenerServiciosFiltroEntidadFecha(string Entidad,string Fecha)
         {
-            return servicioPublicos.Where(l => l.Entidad == "ELectricaribe").ToList();
+            return servicioPublicos.Where(l => l.Entidad == Entidad && l.FechaPago.ToString() == Fecha).ToList();
         }
-        public IList<ServicioPublico> ObtenerServiciosPublicosGasCaribe()
-        {
-            return servicioPublicos.Where(l => l.Entidad == "GasCaribe").ToList();
-        }
-        public IList<ServicioPublico> ObtenerServiciosPublicosEmdupar()
-        {
-            return servicioPublicos.Where(l => l.Entidad == "Emdupar").ToList();
-        }
+        //public IList<ServicioPublico> ObtenerServiciosPublicosGasCaribe()
+        //{
+        //    return servicioPublicos.Where(l => l.Entidad == "GasCaribe").ToList();
+        //}
+        //public IList<ServicioPublico> ObtenerServiciosPublicosEmdupar()
+        //{
+        //    return servicioPublicos.Where(l => l.Entidad == "Emdupar").ToList();
+        //}
         public decimal ValorTotalServiciosPublicos(IList<ServicioPublico> servicioPublicos)
         {
             return servicioPublicos.Sum(l => l.ValorPagado);
         }
+
     }
     }
 
